@@ -10,7 +10,7 @@ class DateInput extends PureComponent {
     this.state = {
       invalid: false,
       changed: false,
-      value: this.formatDate(props),
+      value: null,
     };
   }
 
@@ -18,7 +18,7 @@ class DateInput extends PureComponent {
     const { value } = prevProps;
 
     if (!isEqual(value, this.props.value)) {
-      this.setState({ value: this.formatDate(this.props) });
+      this.setState({ value: null });
     }
   }
 
@@ -40,7 +40,7 @@ class DateInput extends PureComponent {
     const parsed = parse(value, dateDisplayFormat, new Date(), dateOptions);
 
     if (isValid(parsed)) {
-      this.setState({ changed: false }, () => onChange(parsed));
+      this.setState({ changed: false, value: null }, () => onChange(parsed));
     } else {
       this.setState({ invalid: true });
     }
@@ -72,7 +72,7 @@ class DateInput extends PureComponent {
         <input
           readOnly={readOnly}
           disabled={disabled}
-          value={value}
+          value={value ? value : this.formatDate(this.props)}
           placeholder={placeholder}
           aria-label={ariaLabel}
           onKeyDown={this.onKeyDown}
