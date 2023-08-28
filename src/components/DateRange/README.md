@@ -34,7 +34,7 @@ const [state, setState] = useState([
   minDate={now}
   startDatePlaceholder="Saisir la date de début"
   endDatePlaceholder="Saisir la date de fin"
-  editableDateInputs={true}
+  editableDateInputs
   onChange={item => setState([item.selection])}
   moveRangeOnFirstSelection={false}
   ranges={state}

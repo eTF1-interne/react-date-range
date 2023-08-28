@@ -72,7 +72,7 @@ class DateInput extends PureComponent {
         <input
           readOnly={readOnly}
           disabled={disabled}
-          value={value?value:this.formatDate(this.props)}
+          value={value ? value : this.formatDate(this.props)}
           placeholder={placeholder}
           aria-label={ariaLabel}
           onKeyDown={this.onKeyDown}
