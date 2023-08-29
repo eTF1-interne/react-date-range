@@ -5,10 +5,18 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.1
+      - uses: borales/actions-yarn@v3
+        env:
+          NODE_OPTIONS: '--openssl-legacy-provider'      
         with:
           cmd: install
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: borales/actions-yarn@v3
+        env:
+          NODE_OPTIONS: '--openssl-legacy-provider'      
         with:
           cmd: test
