@@ -10,12 +10,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.16.1
-      - uses: borales/actions-yarn@v4.2.0
+      - uses: borales/actions-yarn@v3
         env:
           NODE_OPTIONS: '--openssl-legacy-provider'      
         with:
           cmd: install
-      - uses: borales/actions-yarn@v4.2.0
+      - uses: borales/actions-yarn@v3
         env:
           NODE_OPTIONS: '--openssl-legacy-provider'      
         with:
