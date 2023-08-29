@@ -40,6 +40,7 @@
     "defaults"
   ],
   "dependencies": {
+    "caniuse-lite": "^1.0.30001524",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react-list": "^0.8.13",
