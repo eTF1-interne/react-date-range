@@ -74,7 +74,7 @@
     "eslint-plugin-react": "^7.33.2",
     "jest": "^24.9.0",
     "normalize.css": "^8.0.1",
-    "postcss": "^8.4.28",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.3",
